@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.26.0/luxon.min.js"
+        integrity="sha512-cYjGoxnM2sxryDRpKhwi8uTszEw2zufuDVz1dWlm1+wlvwnhQ4wu00BokHH4IKlogGJNL+2a2GYvHN+xaoUxjQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>NANDOS WEB SITE</h1>
+    <script>
+        //time at which the site should redirect to BLM
+        const floydStart = luxon.DateTime.local(2021, 5, 22, 17, 24);
+        //time at which the user should be redirected to Nando's
+        const floydEnd = luxon.DateTime.local(2021, 5, 22, 17, 25);
+        const interval = setInterval(() => {
+            let luxonNow = luxon.DateTime.now()
+            if ( luxonNow > floydStart && luxonNow < floydEnd) {
+                location.reload()
+            } else if (luxonNow > floydEnd) {
+                clearInterval(interval)
+                console.log("interval cleared")
+            } else {
+                console.log(luxonNow.toString())
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
