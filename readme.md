@@ -1,7 +1,7 @@
 # Black Lives Matter for Nando's
 
--clone repo
--npm i
+- clone repo
+- npm i
 
 ### Server
 - import path and luxon
