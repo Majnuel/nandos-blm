@@ -17,3 +17,5 @@
 
 - copy code snippet into sites JS file
 - modify time variables accodingly for testing
+
+## remove console.logs for production
