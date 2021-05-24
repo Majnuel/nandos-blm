@@ -46,11 +46,11 @@
     <script>
         //time at which the site should redirect back to Nandos
         //this should match the FLOYDEND time both in Nando's site script AND the server
-        const floydEnd = luxon.DateTime.local(2021, 5, 22, 18, 43, 30);
+        const floydEnd = luxon.DateTime.local(2021, 5, 24, 12, 25, 30);
             setInterval(() => {
                 let luxonNow = luxon.DateTime.now()
                 if (luxonNow > floydEnd) {
-                    location.reload()
+                    window.location.href= "/index.html"
                 } else {
                     console.log(luxonNow.toString())
                 }

@@ -13,13 +13,13 @@
     <h1>NANDOS WEB SITE</h1>
     <script>
         //time at which the site should redirect to BLM
-        const floydStart = luxon.DateTime.local(2021, 5, 22, 18, 43);
+        const floydStart = luxon.DateTime.local(2021, 5, 24, 12, 25);
         //time at which the user should be redirected to Nando's
-        const floydEnd = luxon.DateTime.local(2021, 5, 22, 18, 43, 30);
+        const floydEnd = luxon.DateTime.local(2021, 5, 24, 12, 26, 30);
         const interval = setInterval(() => {
             let luxonNow = luxon.DateTime.now()
             if ( luxonNow > floydStart && luxonNow < floydEnd) {
-                location.reload()
+                window.location.href= "/black_lives_matter.html"
             } else if (luxonNow > floydEnd) {
                 clearInterval(interval)
                 console.log("interval cleared")

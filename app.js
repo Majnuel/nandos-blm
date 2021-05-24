@@ -8,8 +8,8 @@ const app = express()
 const port = 3030
 
 //these times need to match across its 3 locations: nandos site, BLM site and the server, format: YYYY, MM, DD, HH, MM, SS
-const floydStart = DateTime.local(2021, 5, 22, 18, 43);
-const floydEnd = DateTime.local(2021, 5, 22, 18, 43, 30);
+const floydStart = DateTime.local(2021, 5, 24, 12, 25);
+const floydEnd = DateTime.local(2021, 5, 24, 12, 26, 30);
 
 app.get('/', (req, res) => {
     let luxonNow = DateTime.now()
