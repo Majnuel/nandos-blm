@@ -10,43 +10,61 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         body {
+            margin: 0px 0px 0px 0px;
             background-color: black;
             color: white;
             text-align: center;  
-            padding:5% 20% 5% 20% ;
+            padding:0% 10% 0% 10% ;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            font-family: "DIN Next Pro Bold";
         }
-        h1 {
-            color:black;
-            margin: 0 0 0 0;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        h5 {
+            margin-top:0px;
+            font-family: "DIN Next Pro Regular";
+            font-size: 15px;
+            font-weight: 400;
         }
         .candle {
-            max-width: 300px;
-        }
-        .logo div {
             max-width: 200px;
         }
+
+        @font-face {
+            font-family: "DIN Next Pro Bold";
+            src: url("blm-fonts/DINNextLTPro-Bold.eot") format('opentype');;
+            src: url("blm-fonts/DINNextLTPro-Bold.ttf") format('truetype');;
+        }
+
+         @font-face {
+            font-family: "DIN Next Pro Regular";
+            src: url("blm-fonts/DINNextLTPro-Regular.eot") format('opentype');;
+            src: url("blm-fonts/DINNextLTPro-Regular.ttf") format('truetype');;
+        }
+        
     </style>
 </head>
 <body>
     <div>
         <img class="candle" src="./candle.jpg" alt="candle" srcset="">
     </div>
-    <h1>Black Lives Matter</h1>
-    <h2>On May 25 at 8:20PM we´re pausing our service in support of Black Lives Matter.</h2>
+    <h2>On May 25 at 8:20PM we're pausing our service in support of Black Lives Matter.</h2>
     <h5>RIP George Perry Floyd Jr. (October 14, 1973 - May 25, 2020) and all those who've lost their lives through racial
     injustice. Service will resume at 8:30pm, May25 after 9 minutes, 29 seconds.</h5>
     <div class="logo">
-        <img src="./logo.jpg" alt="nandos logo" srcset="">
+        <img  style="width: 150px" src="./logo.jpg" alt="nandos logo" srcset="">
     </div>
 
     <script>
         //time at which the site should redirect back to Nandos
         //this should match the FLOYDEND time both in Nando's site script AND the server
-        const floydEnd = luxon.DateTime.local(2021, 5, 24, 12, 25, 30);
+        const floydEnd = luxon.DateTime.local(2021, 5, 25, 16, 25, 30);
             setInterval(() => {
                 let luxonNow = luxon.DateTime.now()
                 if (luxonNow > floydEnd) {
